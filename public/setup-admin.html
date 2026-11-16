@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Créer l’administration · ToutiShop</title>
+  <style>body{font:16px system-ui,sans-serif;background:#f6f4ef;color:#14233f;max-width:520px;margin:8vh auto;padding:24px}main{background:white;border-radius:18px;padding:28px;box-shadow:0 12px 40px #14233f18}label{display:block;margin:14px 0 6px}input{box-sizing:border-box;width:100%;padding:12px;border:1px solid #ccd1da;border-radius:8px}button{margin-top:20px;padding:12px 18px;border:0;border-radius:8px;background:#14233f;color:#fff;font-weight:700;cursor:pointer}#result{margin-top:16px}</style>
+</head>
+<body><main><h1>Créer votre compte administratrice</h1>
+  <p>Cette étape ne peut être faite qu’une seule fois. Le code temporaire doit d’abord être enregistré comme secret <code>ADMIN_BOOTSTRAP_TOKEN</code> dans les paramètres Cloudflare du projet.</p>
+  <form id="setup"><label>Code temporaire</label><input name="token" type="password" autocomplete="off" required>
+  <label>Votre nom</label><input name="name" autocomplete="name" required>
+  <label>Votre adresse e-mail</label><input name="email" type="email" autocomplete="email" required>
+  <label>Mot de passe (12 caractères minimum)</label><input name="password" type="password" autocomplete="new-password" minlength="12" required>
+  <button>Créer le compte</button></form><p id="result" role="status"></p></main>
+  <script src="/setup-admin.js"></script>
+</body></html>
